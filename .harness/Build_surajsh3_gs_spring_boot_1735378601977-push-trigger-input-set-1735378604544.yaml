@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_surajsh3_gs_spring_boot_1735378601977-push-trigger-input-set
+  identifier: Build_surajsh3_gs_spring_boot_1735378601977pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: harnesstest
+  pipeline:
+    identifier: Build_surajsh3_gs_spring_boot_1735378601977
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
