@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_surajsh3_gs_spring_boot_1735378601977
+  name: Build gs-spring-boot
+  orgIdentifier: default
+  projectIdentifier: harnesstest
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: surajsh3/gs-spring-boot
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Arm64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
